@@ -16,4 +16,4 @@ int sequence[]= {3, 5, 2, 4};
 // The time the output pin will remain high after correct sequence entered
 int outputTime = 5000;
 ```
-The configuration in the code above has the buttons connected to digital pins 2, 3, 4 & 5. The output pin as 13 (LED). The sequence the buttons should be pressed as 3 then 5 then 2 then 4. The time the output should be HIGH 5 seconds.
+The configuration in the code above has the buttons connected to digital pins 2, 3, 4 & 5. The output pin as 13 (LED). The sequence the buttons should be pressed as 3 then 5 then 2 then 4. The time the output should be HIGH as 5 seconds.
