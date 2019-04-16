@@ -1,7 +1,12 @@
+// Input pins connected to the buttons
 int buttonPins[] = {2, 3, 4, 5};
 int buttonPinsCount = sizeof(buttonPins) / sizeof(int);
+// Output pin will be high when sequence entered correctly otherwise low
 const int outputPin =  13;
+// The sequence the buttons must be pressed in to trigger output pin
 int sequence[]= {3, 5, 2, 4};
+// The time the output pin will remain high after correct sequence entered
+int outputTime = 5000;
 int sequenceCount = sizeof(sequence) / sizeof(int);
 int correctGuesses = 0;
 int lastInputPin = -1;
@@ -32,7 +37,7 @@ void loop() {
   if (correctGuesses == sequenceCount){
     correctGuesses = 0;
     digitalWrite(outputPin, HIGH);
-    delay(5000);
+    delay(outputTime);
     digitalWrite(outputPin, LOW);
   }
 }
